@@ -12,7 +12,7 @@
 
 进入 **多人游戏 → 添加服务器**，填写以下地址：
 
-`mc.five-plus-one.com`
+`server26.mc.five-plus-one.com`
 
 服务器名称可以随意填写。连接前，请确认已阅读下方公约。
 

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const SERVER_ADDRESS = "mc.five-plus-one.com";
+const SERVER_ADDRESS = "server26.mc.five-plus-one.com";
 type Status = { online: boolean; players?: { online: number; max: number }; version?: { name_clean?: string }; latency?: number };
 
 export function ServerStatus({ compact = false }: { compact?: boolean }) {

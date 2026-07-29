@@ -14,9 +14,8 @@ export const metadata: Metadata = {
     description: "第 5 个世界之外，还有 1 种可能。",
     type: "website",
     url: "/",
-    images: ["/og.png"],
   },
-  twitter: { card: "summary_large_image", images: ["/og.png"] },
+  twitter: { card: "summary_large_image" },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
 

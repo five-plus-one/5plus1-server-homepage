@@ -134,11 +134,30 @@ export default function App() {
 
       <footer>
         <div className="footer-brand">5+1</div>
-        <p>留一点余地，给世界多一种可能。</p>
-        <div className="footer-links">
-          <a href="#top">回到顶部 ↑</a>
-          <a href={siteConfig.skinSiteUrl} target="_blank" rel="noreferrer">皮肤站</a>
-          <a href="mailto:admin@five-plus-one.com">联系我们</a>
+        <div className="footer-content">
+          <p>留一点余地，给世界多一种可能。</p>
+          <div className="footer-groups">
+            <section className="footer-group">
+              <h3>联系我们</h3>
+              <span className="footer-qq">官方 QQ 群 <b>{siteConfig.community.qqGroupNumber}</b></span>
+              <a href={siteConfig.community.qqJoinUrl} target="_blank" rel="noreferrer">
+                点击加入群聊 <span>↗</span>
+              </a>
+              <a href={siteConfig.community.ownerContactUrl} target="_blank" rel="noreferrer">
+                联系腐竹 <span>↗</span>
+              </a>
+            </section>
+            <section className="footer-group">
+              <h3>友情链接</h3>
+              <a href={siteConfig.friendLinks.fivePlusOneHome} target="_blank" rel="noreferrer">
+                五加一的星空 <span>↗</span>
+              </a>
+              <a href={siteConfig.skinSiteUrl} target="_blank" rel="noreferrer">
+                5plus1 皮肤站 <span>↗</span>
+              </a>
+              <a href="#top">回到顶部 <span>↑</span></a>
+            </section>
+          </div>
         </div>
         <small>© 2026 5plus1 Server · Not affiliated with Mojang Studios.</small>
       </footer>

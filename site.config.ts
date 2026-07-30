@@ -3,6 +3,14 @@ export const siteConfig = {
     address: "server26.mc.five-plus-one.com",
   },
   skinSiteUrl: "https://skin.mc.five-plus-one.com",
+  community: {
+    qqGroupNumber: "966619341",
+    qqJoinUrl: "https://qm.qq.com/q/uue8RlGTtY",
+    ownerContactUrl: "https://r-l.ink/contact",
+  },
+  friendLinks: {
+    fivePlusOneHome: "https://r-l.ink/home",
+  },
   modpack: {
     version: "26.2 · v1",
     fileName: "5plus1 server 26.2 整合包 v1.zip",

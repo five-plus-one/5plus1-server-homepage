@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 :root {
   --ink: #172019;
   --paper: #f2f0e8;
@@ -7,6 +5,8 @@
   --orange: #ff633e;
   --muted: #6d746d;
   --line: rgba(23, 32, 25, .16);
+  --font-geist-sans: Arial, "Microsoft YaHei", sans-serif;
+  --font-geist-mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
 }
 
 * { box-sizing: border-box; }

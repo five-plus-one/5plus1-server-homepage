@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import { ServerStatus } from "./server-status";
+import { ServerStatus } from "./ServerStatus";
 import guide from "../content/guide.md?raw";
 import covenant from "../content/covenant.md?raw";
 
@@ -9,7 +9,7 @@ const features = [
   ["03", "一起留下痕迹", "每一条铁路、每一座聚落，都会成为 5plus1 世界编年史的一页。"],
 ];
 
-export default function Home() {
+export default function App() {
   return (
     <main>
       <nav className="nav">

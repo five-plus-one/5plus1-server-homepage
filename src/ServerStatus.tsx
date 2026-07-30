@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 
 const SERVER_ADDRESS = "server26.mc.five-plus-one.com";

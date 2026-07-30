@@ -90,7 +90,8 @@ button { font: inherit; }
 .address-row > span:first-child { display: flex; flex-direction: column; gap: 7px; }
 .address-row small { color: #536120; }
 
-.guide-section { padding: 130px 8vw; display: grid; grid-template-columns: .75fr 1.25fr; gap: 10vw; }
+.guide-section { padding: 130px 8vw; display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); gap: 10vw; }
+.guide-section > *, .markdown { min-width: 0; }
 .guide-aside { position: sticky; top: 60px; align-self: start; }
 .skin-card { margin-top: 45px; padding: 18px; border: 1px solid var(--line); display: flex; align-items: center; gap: 16px; background: #eae8df; max-width: 380px; transition: background .2s; }
 .skin-card:hover { background: white; }
@@ -99,10 +100,44 @@ button { font: inherit; }
 .skin-card small { color: var(--muted); }
 .markdown h3 { font-size: 21px; margin: 0; padding: 30px 0 16px; border-top: 1px solid var(--line); }
 .markdown h3:first-child { border-top: 0; padding-top: 0; }
-.markdown p { color: var(--muted); line-height: 1.8; font-size: 15px; margin: 0 0 26px; }
+.markdown p { color: var(--muted); line-height: 1.8; font-size: 15px; margin: 0 0 26px; overflow-wrap: anywhere; }
 .markdown strong { color: var(--ink); }
-.markdown a { color: var(--ink); border-bottom: 1px solid var(--orange); }
-.markdown code { display: inline-block; padding: 12px 15px; background: var(--ink); color: var(--acid); font: 600 14px/1 var(--font-geist-mono); }
+.markdown a { color: var(--ink); border-bottom: 1px solid var(--orange); overflow-wrap: anywhere; }
+.markdown img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 8px 0 34px;
+  border: 1px solid var(--line);
+  background: #e9e7de;
+  object-fit: contain;
+}
+.markdown :not(pre) > code {
+  padding: .22em .5em;
+  margin: 0 .08em;
+  border: 1px solid rgba(70, 91, 35, .22);
+  border-radius: 4px;
+  background: #e4e9d7;
+  color: #334517;
+  font: 650 .9em/1.65 var(--font-geist-mono);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.markdown pre {
+  max-width: 100%;
+  margin: 8px 0 28px;
+  padding: 18px 20px;
+  overflow-x: auto;
+  border-left: 3px solid var(--acid);
+  background: var(--ink);
+}
+.markdown pre code {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--acid);
+  font: 600 13px/1.7 var(--font-geist-mono);
+}
 .markdown blockquote { margin: 20px 0 30px; padding: 18px 22px; border-left: 4px solid var(--orange); background: #e9e7de; }
 .markdown blockquote p { margin: 0; }
 

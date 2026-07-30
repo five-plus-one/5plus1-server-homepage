@@ -10,6 +10,10 @@ const features = [
   ["03", "一起留下痕迹", "每一条铁路、每一座聚落，都会成为 5plus1 世界编年史的一页。"],
 ];
 
+const guideContent = guide
+  .split("{{MODPACK_DOWNLOAD_URL}}")
+  .join(siteConfig.modpack.downloadUrl);
+
 export default function App() {
   return (
     <main>
@@ -91,7 +95,7 @@ export default function App() {
           </a>
         </div>
         <article className="markdown guide-markdown">
-          <ReactMarkdown>{guide}</ReactMarkdown>
+          <ReactMarkdown>{guideContent}</ReactMarkdown>
         </article>
       </section>
 

@@ -2,6 +2,7 @@ import ReactMarkdown from "react-markdown";
 import { ServerStatus } from "./ServerStatus";
 import guide from "../content/guide.md?raw";
 import covenant from "../content/covenant.md?raw";
+import { siteConfig } from "../site.config";
 
 const features = [
   ["01", "慢一点，也很好", "没有赛季冲刺，没有强制打卡。建筑、探索、养老，照自己的节奏来。"],
@@ -23,7 +24,7 @@ export default function App() {
           <a href="#covenant">公约</a>
           <a href="#download">整合包</a>
         </div>
-        <a className="nav-skin" href="https://skin.mc.five-plus-one.com" target="_blank" rel="noreferrer">
+        <a className="nav-skin" href={siteConfig.skinSiteUrl} target="_blank" rel="noreferrer">
           皮肤站 ↗
         </a>
       </nav>
@@ -84,7 +85,7 @@ export default function App() {
           <div className="section-kicker">/ FIELD GUIDE</div>
           <h2>第一次<br />抵达这里？</h2>
           <p>从账号准备到首次进服，照着路线走，不会迷路。</p>
-          <a className="skin-card" href="https://skin.mc.five-plus-one.com" target="_blank" rel="noreferrer">
+          <a className="skin-card" href={siteConfig.skinSiteUrl} target="_blank" rel="noreferrer">
             <span className="skin-icon">◫</span>
             <span><b>没有正版账号？</b><small>前往 5plus1 皮肤站注册 ↗</small></span>
           </a>
@@ -105,14 +106,18 @@ export default function App() {
           <h2>一包到位，<br />直接出发。</h2>
           <p>预装推荐模组、光影与服务器地址。解压后按说明启动，无需自己逐项配置。</p>
           <div className="pack-meta">
-            <span><b>适用版本</b> Minecraft Java</span>
+            <span><b>整合包版本</b> {siteConfig.modpack.version}</span>
             <span><b>平台</b> Windows</span>
             <span><b>更新</b> 随服务器同步</span>
           </div>
-          <a className="button download-button" href="/downloads/5plus1-server-pack.zip" download>
+          <a
+            className="button download-button"
+            href={siteConfig.modpack.downloadUrl}
+            rel="noreferrer"
+          >
             下载入服整合包 <span>↓</span>
           </a>
-          <small className="file-note">将整合包放入 public/downloads 后即可提供下载</small>
+          <small className="file-note">由 files.mc.five-plus-one.com CDN 提供下载 · {siteConfig.modpack.fileName}</small>
         </div>
       </section>
 
@@ -132,7 +137,7 @@ export default function App() {
         <p>留一点余地，给世界多一种可能。</p>
         <div className="footer-links">
           <a href="#top">回到顶部 ↑</a>
-          <a href="https://skin.mc.five-plus-one.com" target="_blank" rel="noreferrer">皮肤站</a>
+          <a href={siteConfig.skinSiteUrl} target="_blank" rel="noreferrer">皮肤站</a>
           <a href="mailto:admin@five-plus-one.com">联系我们</a>
         </div>
         <small>© 2026 5plus1 Server · Not affiliated with Mojang Studios.</small>

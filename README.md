@@ -29,8 +29,8 @@ npm run build
 - 页面样式：`src/globals.css`
 - 入服教程：`content/guide.md`
 - 服务器公约：`content/covenant.md`
-- 服务器地址与状态查询：`src/ServerStatus.tsx`
-- 整合包：`public/downloads/5plus1-server-pack.zip`
+- 服务器地址、皮肤站与整合包 CDN 地址：`site.config.ts`
+- 服务器状态查询：`src/ServerStatus.tsx`
 
 修改后重新运行 `npm run build` 即可。
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { siteConfig } from "../site.config";
 
-const SERVER_ADDRESS = "server26.mc.five-plus-one.com";
+const SERVER_ADDRESS = siteConfig.server.address;
 type Status = { online: boolean; players?: { online: number; max: number }; version?: { name_clean?: string }; latency?: number };
 
 export function ServerStatus({ compact = false }: { compact?: boolean }) {

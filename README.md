@@ -27,10 +27,12 @@ npm run build
 
 - 页面组件：`src/App.tsx`
 - 页面样式：`src/globals.css`
-- 入服教程：`content/guide.md`
+- 可切换的入服教程：`src/App.tsx`
+- 入服说明参考：`content/guide.md`
 - 服务器公约：`content/covenant.md`
 - 服务器地址、皮肤站与整合包 CDN 地址：`site.config.ts`
 - 服务器状态查询：`src/ServerStatus.tsx`
+- 两个世界的方块插画：`src/WorldArt.tsx`
 
 修改后重新运行 `npm run build` 即可。
 
